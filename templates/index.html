@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estacionamento</title>
+</head>
+<body>
+    <h1>Estacionamento</h1>
+    <a href="/vagas/nova">Adicionar +</a><br>
+    
+    <ul>
+        {% for vaga in vagas %}
+        <li>
+            <a href="/vagas/{{ vaga.id }}">Vaga {{ vaga.posicao }} ocupada {{ vaga.ocupada }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

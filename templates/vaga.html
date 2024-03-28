@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaga {{ vaga.posicao }}</title>
+</head>
+<body>
+    <h1>Vaga {{ vaga.posicao }} ocupada {{ vaga.ocupada }}</h1>
+    <p>Ocupador: {{ vaga.nome }}</p>
+    <p>Onde esta: {{ vaga.ondeesta }}</p>
+    <a href="/vagas/atualizar/{{vaga.id}}">atualizar vaga</a><br>
+    <a href="/vagas/apagar/{{ vaga.id }}">Deletar vaga</a><br>
+    <a href="/vagas">voltar</a><br>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar vaga {{vaga.posicao}}</title>
+</head>
+<body>
+    <h1>Atualizar vaga</h1>
+    <form action="/vagas/atualizar/{{ vaga.id }}" method="POST">
+        <label for="posicao">Vaga:</label><br>
+        <input type="text" id="posicao" name="posicao" value="{{ vaga.posicao }}"><br>
+        <label for="ocupada">Ocupada:</label>
+        <input type="checkbox" id="ocupada" name="ocupada" {% if vaga.ocupada %} checked {% endif %}><br>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" value="{{ vaga.nome }}"><br>
+        <label for="ondeesta">Onde esta:</label><br>
+        <input type="text" id="ondeesta" name="ondeesta" value="{{ vaga.ondeesta }}"><br>
+        <br>
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <a href="/vagas/{{ vaga.id }}">voltar</a>
+</body>
+</html>
