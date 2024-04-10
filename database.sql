@@ -1,6 +1,6 @@
 CREATE DATABASE `estacionamento` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
--- estacionamento.vagas definition
+USE 'estacionamento';
 
 CREATE TABLE `vagas` (
   `posicao` varchar(100) NOT NULL,
